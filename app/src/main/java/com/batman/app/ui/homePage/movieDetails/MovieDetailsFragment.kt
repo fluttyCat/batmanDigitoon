@@ -49,7 +49,7 @@ class MovieDetailsFragment : ParentFragment<MovieDetailViewModel, FragmentMovieD
                 language = it.language,
                 country = it.country,
                 awards = it.awards,
-                ratings = it.ratings[0].source + " " + it.ratings[0].value
+                ratings = it.ratings[1].source + " " + it.ratings[1].value
             )
             dataBinding.progressBar.visibility = View.GONE
             dataBinding.movieDetails = details

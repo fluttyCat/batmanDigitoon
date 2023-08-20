@@ -5,8 +5,9 @@ import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import com.core.api.HomeApi
-import com.core.base.BaseObserver.Companion.networkStatus
+
 import com.core.base.BaseRepository
+import com.core.base.BaseRepository.Companion.networkStatus
 import com.core.base.Response
 import com.core.dataSource.BatmanListDataSource
 import com.core.dto.batman.BatmanDetailDto
