@@ -6,6 +6,7 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import androidx.paging.LoadState
 import androidx.paging.map
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -36,7 +37,13 @@ class MoviesFragment : ParentFragment<MoviesViewModel, FragmentMoviesBinding>(),
 
 
     private val moviesAdapter: MoviesAdapter by lazy {
-        MoviesAdapter {}
+        MoviesAdapter {
+            findNavController().navigate(
+                MoviesFragmentDirections.actionMoviesFragmentToMovieDetailsFragment(
+                    it.imdbID
+                )
+            )
+        }
     }
 
 

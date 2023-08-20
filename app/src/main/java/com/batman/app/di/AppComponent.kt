@@ -1,7 +1,7 @@
 package com.batman.app.di
 
 import android.app.Application
-import com.batman.app.ui.homePage.articleDetails.ArticlesDetailFragment
+import com.batman.app.ui.homePage.movieDetails.MovieDetailsFragment
 import com.batman.app.ui.homePage.main.MainActivity
 import com.batman.app.ui.homePage.moviesPage.MoviesFragment
 import com.batman.app.ui.splashPage.splashActivity.SplashActivity
@@ -25,7 +25,7 @@ interface AppComponent {
     //Fragment
     fun inject(app: SplashFragment)
     fun inject(app: MoviesFragment)
-    fun inject(app: ArticlesDetailFragment)
+    fun inject(app: MovieDetailsFragment)
 
 
     //bottom sheet
