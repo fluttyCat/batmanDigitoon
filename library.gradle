@@ -1,0 +1,153 @@
+ext.sdk = [
+        compileSdk : 31,
+        minSdk     : 21,
+        targetSdk  : 31,
+        buildTools : "30.0.2",
+        versionCode: 1,
+        versionName: "0.0.1"
+]
+
+
+ext.versions = [
+        kotlin           : '1.4.0',
+        core             : '1.3.1',
+        appCompat        : '1.2.0',
+        constraint       : '2.0.1',
+        lifeCycle        : '2.2.0',
+        material         : '1.1.0',
+        room             : '2.2.4',
+        dagger           : '2.22',
+        daggerKapt       : '2.20',
+        glide            : '4.12.0',
+        junit            : '4.12',
+        runner           : '1.0.2',
+        core_test_version: '1.2.0',
+        atsl_version     : '1.1.1',
+        espresso         : '3.2.0',
+        livedata         : '2.3.1',
+        ausomeDialog     : '1.0.5',
+        countdownView    : '2.1.6',
+        circularImageView: '3.1.0',
+        awesomeSpinner   : '1.5.2',
+        coroutines       : '1.4.3',
+        paging           : '3.0.0',
+
+]
+ext.deps = [
+
+        kotlin               : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlin",
+        appCompat            : "androidx.appcompat:appcompat:$versions.appCompat",
+        core                 : "androidx.core:core-ktx:$versions.core",
+        constraint           : "androidx.constraintlayout:constraintlayout:$versions.constraint",
+        material             : "com.google.android.material:material:$versions.material",
+        recycler             : "com.android.support:recyclerview-v7:$versions.appCompat",
+        cardView             : "androidx.cardview:cardview:1.0.0",
+        lifeCycle_ext        : "androidx.lifecycle:lifecycle-extensions:$versions.lifeCycle",
+        lifeCycle_run        : "androidx.lifecycle:lifecycle-runtime:$versions.lifeCycle",
+        lifeCycle_kapt       : "androidx.lifecycle:lifecycle-compiler:$versions.lifeCycle",
+        viewModel            : "androidx.lifecycle:lifecycle-viewmodel-ktx:$versions.lifeCycle",
+        preference           : 'androidx.preference:preference:1.0.0',
+
+        legacy               : 'androidx.legacy:legacy-support-v4:1.0.0',
+        multi_dex            : "androidx.multidex:multidex:2.0.1",
+
+        nav_fragment         : 'androidx.navigation:navigation-fragment-ktx:2.5.3',
+        nav_ui               : 'androidx.navigation:navigation-ui-ktx:2.5.3',
+
+        gson                 : "com.google.code.gson:gson:2.8.6",
+        okhttp               : "com.squareup.okhttp3:okhttp:4.9.1",
+        retrofit             : "com.squareup.retrofit2:retrofit:2.7.1",
+        retrofit_con         : "com.squareup.retrofit2:converter-gson:2.6.0",
+        retrofit_rx          : "com.squareup.retrofit2:adapter-rxjava2:2.6.2",
+        okhttp_interceptor   : "com.squareup.okhttp3:logging-interceptor:4.9.1",
+
+        okhttp_test          : "com.squareup.okhttp3:mockwebserver:4.4.0",
+        
+
+        rxJava               : "io.reactivex.rxjava2:rxjava:2.2.12",
+        rxAndroid            : "io.reactivex.rxjava2:rxandroid:2.1.1",
+
+        dagger               : "com.google.dagger:dagger:$versions.dagger",
+        dagger_android       : "com.google.dagger:dagger-android:$versions.dagger",
+        dagger_support       : "com.google.dagger:dagger-android-support:$versions.dagger",
+
+
+        dagger_Kapt          : "com.google.dagger:dagger-compiler:$versions.daggerKapt",
+        dagger_processor     : "com.google.dagger:dagger-android-processor:$versions.dagger",
+
+        room                 : "androidx.room:room-runtime:$versions.room",
+        room_kapt            : "androidx.room:room-compiler:$versions.room",
+        room_ktx             : "androidx.room:room-ktx:$versions.room",
+        room_rx              : "androidx.room:room-rxjava2:$versions.room",
+        room_guava           : "androidx.room:room-guava:$versions.room",
+        room_test            : "androidx.room:room-testing:$versions.room",
+
+        glide                : "com.github.bumptech.glide:glide:$versions.glide",
+        glide_okhttp         : "com.github.bumptech.glide:okhttp3-integration:$versions.glide",
+        glide_kapt           : "com.github.bumptech.glide:compiler:$versions.glide",
+
+        fire_core            : 'com.google.firebase:firebase-analytics:17.2.2',
+        fire_analytic        : 'com.google.firebase:firebase-analytics:17.3.0',
+        fire_crashlytic      : 'com.google.firebase:firebase-crashlytics:17.0.0-beta03',
+        firebase_core        : 'com.google.firebase:firebase-core:9.6.1',
+        /*fire_messaging       : 'com.google.firebase:firebase-messaging-ktx',*/
+
+        junit                : "junit:junit:$versions.junit",
+        coreTest             : "androidx.tegms:playst:core:$versions.core_version",
+        ext_junit            : "androidx.test.ext:junit:$versions.atsl_version",
+        runner_ext           : "androidx.test.ext:junit:$versions.atsl_version",
+
+        espresso_cont        : "androidx.test.espresso:espresso-contrib:$versions.espresso",
+
+        rules                : 'androidx.test:rules:1.1.0',
+        runner               : 'androidx.test:runner:1.1.0',
+        espresso             : 'androidx.test.espresso:espresso-core:3.1.0',
+
+        localbroadcastmanager: "androidx.localbroadcastmanager:localbroadcastmanager:1.0.0",
+
+        auth                 : "com.google.android.gms:play-services-auth:17.0.0",
+        auth_phone           : "com.google.android.gms:play-services-auth-api-phone:17.3.0",
+
+        mkloader             : 'com.tuyenmonkey:mkloader:1.4.0',
+
+        ask                  : 'com.vistrav:ask:2.5',
+
+        legacy_support       : 'androidx.legacy:legacy-support-v4:1.0.0',
+
+        core_test            : "androidx.arch.core:core-testing:2.0.1",
+        fragment_test        : "androidx.fragment:fragment-testing:1.2.0-rc01",
+        dataBinding_test     : "androidx.arch.core:core-testing:2.0.1",
+
+        sunDatePicker        : "com.alirezaafkar:sundatepicker:2.1.2",
+
+        picasso              : "com.squareup.picasso:picasso:2.71828",
+
+        toasty               : "com.github.GrenderG:Toasty:1.5.0",
+
+        livedata             : "androidx.lifecycle:lifecycle-livedata-ktx:$versions.livedata",
+
+        ausomeDialog         : "com.github.chnouman:AwesomeDialog:$versions.ausomeDialog",
+
+        countdownView        : "com.github.iwgang:countdownview:$versions.countdownView",
+
+        circularImageView    : "de.hdodenhof:circleimageview:$versions.circularImageView",
+
+        awesomeSpinner       : "com.github.sadra:AwesomeSpinner:$versions.awesomeSpinner",
+
+        viewpagerIndicator   : "com.tbuonomo.andrui:viewpagerdotsindicator:4.1.2",
+
+        coroutines_android   : "org.jetbrains.kotlinx:kotlinx-coroutines-android:$versions.coroutines",
+        coroutines_core      : "org.jetbrains.kotlinx:kotlinx-coroutines-core:$versions.coroutines",
+
+
+        lifecycle_livedata   : "androidx.lifecycle:lifecycle-livedata-ktx:$versions.lifeCycle",
+        paging               : "androidx.paging:paging-runtime-ktx:$versions.paging",
+        paging_common        : "androidx.paging:paging-common-ktx:3.1.0-alpha01",
+        paging_rxjava        : "androidx.paging:paging-rxjava2-ktx:3.1.0-alpha01",
+
+        mkloader             : 'com.tuyenmonkey:mkloader:1.4.0',
+        view_pager_2         : "androidx.viewpager2:viewpager2:1.0.0",
+        totp : "dev.turingcomplete:kotlin-onetimepassword:2.4.0"
+
+]
+

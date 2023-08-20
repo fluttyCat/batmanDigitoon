@@ -1,0 +1,142 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion sdk.compileSdk
+    buildToolsVersion sdk.buildTools
+    defaultConfig {
+        minSdkVersion sdk.minSdk
+        targetSdkVersion sdk.targetSdk
+        versionCode sdk.versionCode
+        versionName sdk.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+    buildFeatures {
+        dataBinding = true
+    }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+    androidExtensions {
+        experimental = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    /**
+     * Android Support Library
+     * */
+    /**
+     * Android Support Library
+     * */
+    api deps.kotlin
+    api deps.appCompat
+    api deps.material
+    api deps.constraint
+    api deps.core
+    api deps.viewModel
+    api deps.recycler
+    api deps.cardView
+    api deps.nav_fragment
+    api deps.nav_ui
+    api deps.paging
+    api deps.multi_dex
+    api deps.legacy
+
+    /**
+     * Reactive Programming (RxJava)
+     * */
+    api deps.rxJava
+    api deps.rxAndroid
+
+    /**
+     * Room
+     * */
+    api deps.room
+    api deps.room_rx
+    kapt deps.room_kapt
+    testImplementation deps.room_test
+
+    /**
+     * Location
+     */
+    implementation 'com.google.android.gms:play-services-location:17.1.0'
+
+
+    /**
+     * Retrofit
+     * */
+    api deps.gson
+    api deps.okhttp
+    api deps.retrofit
+    api deps.retrofit_con
+    api deps.retrofit_rx
+    api deps.okhttp_interceptor
+
+
+    /**
+     * Dagger V2
+     * */
+    api deps.dagger
+    api deps.dagger_support
+    api deps.legacy_support
+    kapt deps.dagger_Kapt
+
+    /**
+     * Loader
+     */
+    api deps.mkloader
+
+    /*Glide*/
+    api deps.glide
+    api deps.glide_okhttp
+    kapt deps.glide_kapt
+
+    /* Picasso*/
+    api deps.picasso
+
+    /*circular image view*/
+    api deps.circularImageView
+
+
+
+    /**
+     * Test Library
+     * */
+    kaptAndroidTest deps.dataBinding_test
+    testImplementation deps.junit
+    testImplementation deps.okhttp_test
+
+    androidTestImplementation deps.core
+
+    androidTestImplementation deps.rules
+    androidTestImplementation deps.runner
+    androidTestImplementation deps.espresso
+    androidTestImplementation deps.core_test
+    androidTestImplementation deps.ext_junit
+    implementation "androidx.core:core-ktx:1.3.1"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
+}

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Batman</string>
+    <string name="bottom_nav_item_profile">Profile</string>
+    <string name="bottom_nav_item_article">Article</string>
+    <string name="profile_text">پروفایل کاربر</string>
+    <string name="button_text">gitHub</string>
+    <string name="button_text_about_me">about Me</string>
+    <string name="developer_option">Developer Option is enabled.</string>
+    <string name="debug_mode">Application is in debug mode.</string>
+    <string name="aboutMe">Android Developer with 2 years of experience in develop and maintain android applications. good knowledge of java and kotin, implemented and contributed in some applications like 4030 and Treata and P Publication. good knowledge of android architectures like mvvm, mvi and modular architecture.</string>
+</resources>

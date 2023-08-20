@@ -1,0 +1,45 @@
+<resources>
+
+
+    <string name="forbidden">Forbidden</string>
+    <string name="eofException">End of file Exception</string>
+    <string name="forbid">Forbidden</string>
+    <string name="ioException">io Exception</string>
+    <string name="sqLiteException">SQLite exception</string>
+    <string name="authorization">توکن اکسپایر شده است</string>
+    <string name="runtimeException">runtimeException</string>
+    <string name="jsonFormat">json format exception</string>
+    <string name="undefine">undefine</string>
+    <string name="completed">User profile is already complete.</string>
+
+    <string name="duplicateEmail">این ایمیل قبلا ثبت نام شده است.</string>
+    <string name="beString">The email must be a string.</string>
+    <string name="emailORphone">The email field is required when phone number is not present.</string>
+    <string name="validAdrs">The email must be a valid email address.</string>
+    <string name="greater255">The email may not be greater than 255 characters.</string>
+    <string name="Error422">Unprocessable Entity</string>
+    <string name="Error414">URI Too Large</string>
+    <string name="Error500">URI Too Large</string>
+
+
+    <string name="space">\u0020</string>
+    <string name="save">Save</string>
+
+
+    <string name="error_no_permission">You do not have the necessary authorization to create a voice message.</string>
+    <string name="generic_error">An unknown error has occurred, please try again later</string>
+
+    <string name="record_pause">  Pause</string>
+    <string name="record_replace">  Replace</string>
+    <string name="not_found">NOT  FOUND</string>
+    <string name="bad_request">Bad Request</string>
+    <string name="payment">Payment Required</string>
+    <string name="not_allowed">Method Not Allowed</string>
+    <string name="not_acceptable">Not Acceptable</string>
+    <string name="proxy">Proxy Authentication Required</string>
+    <string name="timeout">Request Timeout</string>
+    <string name="NullPointException">NullPointException</string>
+    <string name="Undefine">Undefine</string>
+
+
+</resources>

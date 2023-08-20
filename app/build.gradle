@@ -1,0 +1,160 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'androidx.navigation.safeargs.kotlin'
+apply plugin: 'com.google.firebase.crashlytics'
+
+android {
+    compileSdkVersion sdk.compileSdk
+    buildToolsVersion sdk.buildTools
+
+    defaultConfig {
+        applicationId "com.parisaGhader.batman"
+        minSdkVersion sdk.minSdk
+        targetSdkVersion sdk.targetSdk
+        multiDexEnabled true
+        versionCode sdk.versionCode
+        versionName sdk.versionName
+        vectorDrawables.useSupportLibrary = true
+        setProperty("archivesBaseName", "Lead-vName-" + versionName + "-vCode-" + versionCode)
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            renderscriptDebuggable false
+            jniDebuggable false
+            debuggable false
+        }
+    }
+
+    buildFeatures {
+        dataBinding = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+
+    api deps.kotlin
+    api deps.appCompat
+    api deps.material
+    api deps.constraint
+    api deps.core
+    api deps.viewModel
+    api deps.recycler
+    api deps.cardView
+    api deps.nav_fragment
+    api deps.nav_ui
+    api deps.multi_dex
+    api deps.legacy
+    api deps.preference
+    api deps.localbroadcastmanager
+
+    /*
+    retrofit
+    * */
+    api deps.retrofit
+    api deps.retrofit_con
+    api deps.retrofit_rx
+    api deps.okhttp_interceptor
+
+    /**
+     * Firebase
+     * */
+    api deps.fire_core
+    api deps.fire_analytic
+    api deps.fire_crashlytic
+    implementation platform('com.google.firebase:firebase-bom:28.4.0')
+    implementation 'com.google.firebase:firebase-messaging-ktx'
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+
+    /**
+     * Dagger V2
+     * */
+    api deps.dagger
+    api deps.dagger_support
+    api deps.legacy_support
+    kapt deps.dagger_Kapt
+
+
+    /**
+     * Paging And LifeCycle Library
+     * */
+    api deps.coroutines_android
+    api deps.coroutines_core
+    api deps.lifeCycle_run
+    api deps.lifecycle_livedata
+    api deps.paging
+    api deps.paging_common
+    api deps.paging_rxjava
+
+
+    /*Glide*/
+    api deps.glide
+    api deps.glide_okhttp
+    kapt deps.glide_kapt
+
+    /* Picasso*/
+    api deps.picasso
+
+    /*toasty*/
+    api deps.toasty
+
+    /* Live data */
+    api deps.livedata
+
+    /*countdown view*/
+    api deps.countdownView
+
+    /*circular image view*/
+    api deps.circularImageView
+
+    /*view pager 2*/
+    api deps.view_pager_2
+
+    /*view pager indicator*/
+    api deps.viewpagerIndicator
+
+    /* one time password*/
+    api deps.totp
+
+    implementation "com.google.android.material:material:1.1.0"
+    implementation 'com.arasthel:spannedgridlayoutmanager:3.0.2'
+
+    /**
+     * Test Library
+     * */
+    kaptAndroidTest deps.dataBinding_test
+    testImplementation deps.junit
+    testImplementation deps.okhttp_test
+
+    androidTestImplementation deps.core
+
+    androidTestImplementation deps.rules
+    androidTestImplementation deps.runner
+    androidTestImplementation deps.espresso
+    androidTestImplementation deps.core_test
+    androidTestImplementation deps.ext_junit
+
+
+    implementation project(path: ':core')
+
+}

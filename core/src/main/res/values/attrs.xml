@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="TextViewCustom">
+
+    </declare-styleable>
+
+    <declare-styleable name="ImageViewCustom">
+        <attr name="imageResource" format="integer" />
+    </declare-styleable>
+</resources>
