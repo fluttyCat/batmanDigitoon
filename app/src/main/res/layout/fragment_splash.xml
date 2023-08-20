@@ -5,7 +5,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#6a6">
+        android:background="@color/white">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="250dp"
@@ -14,7 +14,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_acorn" />
+            app:srcCompat="@drawable/logo" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -13,7 +13,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="8dp">
+        android:paddingHorizontal="8dp"
+        android:paddingTop="16dp">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/ivMovieImage"
@@ -24,15 +25,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvImdb"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@{movieItem.imdbID}"
-            android:textColor="@android:color/black"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ivMovieImage" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvTitle"
@@ -40,8 +32,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:ellipsize="end"
-            android:maxLines="3"
-            android:text="@{movieItem.title}"
+            android:maxLines="1"
+            android:text="@{`movie title : ` +movieItem.title}"
             android:textColor="@android:color/black"
             android:textSize="15sp"
             android:textStyle="bold"
@@ -54,10 +46,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
-            android:ellipsize="end"
-            android:maxLines="5"
-            android:text="@{movieItem.type}"
+            android:layout_marginTop="8dp"
+            android:text="@{`movie type : ` + movieItem.type}"
             android:textColor="@android:color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/ivMovieImage"
@@ -65,13 +55,34 @@
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvYear"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="@{movieItem.year}"
+            android:text="@{`launch date : ` +movieItem.year}"
             android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="@+id/tvType"
+            app:layout_constraintStart_toStartOf="@+id/tvType"
+            app:layout_constraintTop_toBottomOf="@+id/tvType" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvImdb"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@{`imdb Id : ` + movieItem.imdbID}"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="@+id/ivMovieImage"
+            app:layout_constraintStart_toStartOf="@+id/ivMovieImage"
+            app:layout_constraintTop_toBottomOf="@+id/ivMovieImage" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/orange"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvImdb" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
